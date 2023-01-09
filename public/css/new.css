@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+#giphyUrl, #usernameField, #passwordField, #editId, #newMajanote {
+	display: none;
+}
+
+#stopEdit {
+	position: absolute;
+	white-space: nowrap;
+	right: 50%;
+	bottom: 9%;
+	display: none;
+}
+
+#selectGifText {
+	font-family: 'Indie Flower', cursive; 
+	font-weight: bold;
+	font-size: 3rem;
+	margin-top: 150px;
+	display: none;
+	position: relative;
+    left: -8%;
+    font-family: 'Indie Flower', cursive;
+    text-align: center;
+}
+
+label {
+	margin: 0;
+}
+
+#giphyGifs {
+	display: relative;
+}
+
+.selectedGif {
+	border: 5px solid lime;
+}
+
+.gifFigure {
+	display: inline-block;
+	margin: 20px;
+}
+
+.gifFigure img {
+	max-width: 100px;
+	max-height: 100px;
+}
+
+figure {
+	margin: 0;
+}
+
+.sticky-content {
+	/* width: 115%; */
+	height: 115%;
+}  
+.sticky-container {
+	display: block;
+	position: relative;
+	top:-800px;
+	transition: all 1s;
+	opacity:0;
+	z-index: 10;
+}
+.sticky-container.active {
+	top:0px;
+	opacity:1;
+	
+}
+
+.container2 {
+	display:block;
+	position: relative;
+	transition: all 1s;
+	opacity: 1;
+}
+.container2.active{
+	opacity: 0.3;
+}
+
+#notesGrid {
+	margin-top: 123px;
+	margin-left: 0;
+	border: 1px solid black;
+	border-radius: 20px;
+	top:-400px;
+	position: relative;
+}
+
+
+body.active {
+	background-color: rgba(85, 166, 236, 0.5);
+}
+
+
+@media screen and (max-width: 1400px) {
+	.sticky-content {
+		height: 116%;
+	}
+	.sticky:before{
+		height: 91%;
+		width: 92%;
+	}
+	#newForm {
+		font-size: 19px;
+	}
+	
+}
+
+@media screen and (max-width: 1198px) {
+	#newForm {
+		font-size: 15px;
+	}
+}
+
+
+
+@media screen and (max-width: 992px) {
+	#loginButton {
+		left: 1%
+	}
+
+	#logoutButton {
+		right: -2%
+	}
+
+  .sticky-content {
+    height: 190%;
+		width: 130%;
+  }
+
+  .sticky:before {
+	height: 164%;
+	width: 115%;
+  }
+
+  #newForm {
+	font-size: 17px;
+}
+
+
+}
+
+@media screen and (max-width: 768px) {
+
+	#loginButton {
+		margin-left:0;
+	}
+
+
+	.sticky:before {
+		height: 168%;
+		width: 120%;
+	}
+  
+	#newForm {
+	  font-size: 9px;
+  }
+  }
+
+  
+
+  @media screen and (max-width: 519px) {
+	#loginButton {
+		margin-left:0;
+	}
+
+
+	.sticky-content .sticky:before {
+		height: 168%;
+		width: 120%;
+	}
+  
+	#newForm {
+	  font-size: 9px;
+		top: -10px;
+  }
+  }
+
+  @media screen and (max-width: 451px) {
+	#loginButton {
+		margin-left:0;
+	}
+	.sticky-content .sticky:before {
+		height: 168%;
+		width: 120%;
+	}
+  
+	#newForm {
+	  font-size: 9px;
+		top: -10px;
+		left: -20px;
+  }
+	#noteCreateText {
+		font-size: 20px;
+	}
+  }
+	@media screen and (max-width: 375px) {
+	#loginButton {
+		margin-left:0;
+	}
+
+
+	.sticky-content .sticky:before {
+		height: 168%;
+		width: 120%;
+	}
+	
+	#newForm {
+		font-size: 9px;
+		top: -10px;
+	}
+	#noteCreateText {
+		font-size: 15px;
+	}
+	}
+
+	@media screen and (max-width: 280px) {
+		#loginButton {
+			margin-left:0;
+			
+		}
+
+		#logoutButton {
+			font-size: 0.8rem;
+		}
+
+		#createButton {
+			font-size: 0.8rem;
+		}
+	
+	
+		.sticky-content {
+			height: 273%;
+    		width: 169%;
+		}
+
+		.sticky:before{
+			height: 265%;
+    		width: 148%;
+		}
+		
+		#newForm {
+			font-size: 9px;
+			top: -10px;
+		}
+		#noteCreateText {
+			font-size: 15px;
+		}
+
+		#notesGrid {
+			margin-top: 123px;
+    margin-left: 0;
+	grid-template-columns: repeat(1, 1fr);
+		}
+		}
+
+#giphyRemove {
+	display: none;
+	position: absolute;
+	white-space: nowrap;
+	top: 327px;
+	right: 20%;
+}

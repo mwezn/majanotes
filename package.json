@@ -1,0 +1,34 @@
+{
+  "name": "expressjs",
+  "version": "1.0.0",
+  "description": "<!-- improve this README by following https://github.com/getfutureproof/fp_guides_wiki/wiki/Writing-READMEs --> # Majanotes",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --watchAll --env=jsdom",
+    "start": "node start.js",
+    "dev": "nodemon start.js",
+    "run": "nodemon start.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.8",
+    "express": "^4.17.3",
+    "mongodb": "^4.13.0",
+    "supertest": "^6.2.2"
+  },
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "nodemon": "^2.0.20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nottnottloop/fp_majanotes.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nottnottloop/fp_majanotes/issues"
+  },
+  "homepage": "https://github.com/nottnottloop/fp_majanotes#readme"
+}
