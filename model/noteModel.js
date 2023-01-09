@@ -6,6 +6,12 @@ class Note {
 		this.note = data.note;
 		this.color = data.color;
 		this.formColor = data.formColor;
+		this.author=data.author;
+		this.gif=data.gif;
+		this.heart=data.heart;
+		this.thumbs=data.thumbs;
+		this.neutral=data.neutral;
+		this.comments=data.comments;
 	}
 
 
@@ -16,7 +22,7 @@ static get all(){
 			 const db = await init()
 			 const notesData = await db.collection('notes').find().toArray()
 			 const notes = notesData.map(note => new Note({...note}))
-			 res(notesData);
+			 res(notes);
 	   } catch (err) {
 			 rej(`Error retrieving users: ${err}`)
 	   }
