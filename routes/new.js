@@ -3,10 +3,10 @@ const fs = require("fs");
 const path = require('path');
 const router = express.Router();
 
-const sharedFunctions = require(path.resolve(__dirname, "sharedFunctions"));
+const newNotePost=require("./new2");
 
 router
   .route("/")
-  .post((req, res) => { sharedFunctions.newNote(req, res); });
+  .post((req, res) => { newNotePost.newNote(req, res) });
 
 module.exports = router;

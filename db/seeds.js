@@ -13,16 +13,6 @@ db.notes.insertMany([
         "gif": "https://media2.giphy.com/media/28GHfhGFWpFgsQB4wR/giphy-downsized.gif?cid=0d81c17dzckaizn1bs0ubka3ldyj6dgp2vo9og2f088jm7l6&rid=giphy-downsized.gif&ct=g"
       },
       {
-        "id": 0,
-        "title": "Mwezn",
-        "note": "Funny cats vs dogs jedi",
-        "color": "white",
-        "formColor": "white",
-        "author": "mwezn",
-        "gif": "https://media2.giphy.com/media/xBAreNGk5DapO/giphy.gif?cid=0d81c17dh0rwpc4gh5k4xqfxhrgjsab0bcadba8g060qmrwg&rid=giphy.gif&ct=g",
-        "heart": 3
-      },
-      {
         "id": 3,
         "title": "rrandom",
         "note": "Hiii",
@@ -46,5 +36,30 @@ db.notes.insertMany([
         "note": "hhhh",
         "color": "white",
         "formColor": "white"
+      },
+      {
+        "id": 5,
+        "title": "yuhh",
+        "note": "kjj",
+        "color": "white",
+        "formColor": "white"
+      },
+      {
+        "id": 0,
+        "title": "Mwezn",
+        "note": "Funny cats vs dogs jedi",
+        "color": "white",
+        "formColor": "white",
+        "author": "mwezn",
+        "gif": "https://media2.giphy.com/media/xBAreNGk5DapO/giphy.gif?cid=0d81c17dh0rwpc4gh5k4xqfxhrgjsab0bcadba8g060qmrwg&rid=giphy.gif&ct=g",
+        "heart": 3,
+        "thumbs": 2,
+        "neutral": 2,
+        "comments": [
+          {
+            "comment": "HAHA",
+            "author": "anonymous"
+          }
+        ]
       }
 ])

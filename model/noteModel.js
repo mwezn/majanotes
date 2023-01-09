@@ -29,28 +29,34 @@ static get all(){
 	})
  }
 
- static create(data) {
+ static create(title,note, color) {
 	return new Promise (async (res, rej) => {
 	   try {
 		  const db = await init();
 		  console.log("Creating new note")
-		  let newnote= await db.collection('notes').insertOne({
-			 id: data.id, 
-			 title: data.title, 
-			 note: data.note,
-			 color:data.color,
-			 formColor: data.formColor
-		  })
-		  // let newUser = new User(user.ops[0]);
+		  let newnote= await db.collection('notes').insertOne({title,note,color})
+		  let newNote = new Note(newnote);
 		  console.log("This note has been created")
-		  console.log(newnote)
-		  res(`user created succesfully`)
+		  res(newNote)
 
 	   } catch (err) {
-		  rej(`Error creating user: ${err}`);
+		  rej(`Error creating note: ${err}`);
 	   }
 	})
  }
+
+ static create2(name, age, country, fights, wins){
+	return new Promise (async (resolve, reject) => {
+		try {
+			const db = await init();
+			let fightData = await db.collection('dogs').insertOne({ name, age, country, fights,wins})
+			let fighter = new Fighter(fightData.ops[0]);
+			resolve (fighter);
+		} catch (err) {
+			reject('Error creating fighter');
+		}
+	});
+}
 
 }
 
