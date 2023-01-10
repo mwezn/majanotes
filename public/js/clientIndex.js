@@ -38,10 +38,12 @@ createButton.addEventListener('click', () => {
     loginBtn.classList.toggle('inactive')
     loggedIntxt.classList.toggle('active')
     console.log(stickycontainer.classList)
-    if(stickycontainer.classList.contains('active')) createButton.innerHTML='x'
+    createButton.classList.toggle('open')
+
+    /*if(stickycontainer.classList.contains('active')) createButton.innerHTML='x'
     else {
-        createButton.innerHTML='+ create'
-    }
+        createButton.innerHTML='create'
+    }*/
     
 
 });

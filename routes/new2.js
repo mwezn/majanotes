@@ -3,9 +3,9 @@ const Note = require('../model/noteModel')
 function newNote(req, res) {
    
   try {
-      console.log(req.body.title,req.body.note,req.body.color)
-      let note= Note.create(req.body.title, req.body.note, req.body.color)
-      //res.json(note)
+      console.log(req.body.title,req.body.note,req.body.color);
+      let note= Note.create(req.body);
+      console.log(note)
       res.redirect("/");
   }
   catch (err){

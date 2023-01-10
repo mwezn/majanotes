@@ -29,12 +29,12 @@ static get all(){
 	})
  }
 
- static create(title,note, color) {
+ static create(data) {
 	return new Promise (async (res, rej) => {
 	   try {
 		  const db = await init();
 		  console.log("Creating new note")
-		  let newnote= await db.collection('notes').insertOne({title,note,color})
+		  let newnote= await db.collection('notes').insertOne({...data})
 		  let newNote = new Note(newnote);
 		  console.log("This note has been created")
 		  res(newNote)
@@ -44,19 +44,6 @@ static get all(){
 	   }
 	})
  }
-
- static create2(name, age, country, fights, wins){
-	return new Promise (async (resolve, reject) => {
-		try {
-			const db = await init();
-			let fightData = await db.collection('dogs').insertOne({ name, age, country, fights,wins})
-			let fighter = new Fighter(fightData.ops[0]);
-			resolve (fighter);
-		} catch (err) {
-			reject('Error creating fighter');
-		}
-	});
-}
 
 }
 

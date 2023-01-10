@@ -101,6 +101,8 @@ a:hover {
   white-space: nowrap;
 }
 
+
+
 .card-title {
   font-family: 'Indie Flower';
   font-weight: bold;
@@ -163,6 +165,14 @@ a:hover {
 	font-size: 2vw;
 	text-align: center;
 	font-weight: normal;
+}
+
+.mainBtn::before {
+  content: '+';
+  transition:all 2s;
+}
+.mainBtn.open::before {
+  transform: rotate(45deg) translate(35px, -35px);
 }
 
 button {
