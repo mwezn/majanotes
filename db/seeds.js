@@ -31,20 +31,6 @@ db.notes.insertMany([
         "heart": 4
       },
       {
-        "id": 4,
-        "title": "yhh",
-        "note": "hhhh",
-        "color": "white",
-        "formColor": "white"
-      },
-      {
-        "id": 5,
-        "title": "yuhh",
-        "note": "kjj",
-        "color": "white",
-        "formColor": "white"
-      },
-      {
         "id": 0,
         "title": "Mwezn",
         "note": "Funny cats vs dogs jedi",

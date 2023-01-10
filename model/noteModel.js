@@ -6,15 +6,13 @@ class Note {
 		this.note = data.note;
 		this.color = data.color;
 		this.formColor = data.formColor;
-		this.author=data.author;
+		this.author=data.author||data.username;
 		this.gif=data.gif;
 		this.heart=data.heart;
 		this.thumbs=data.thumbs;
 		this.neutral=data.neutral;
 		this.comments=data.comments;
 	}
-
-
 
 static get all(){
 	return new Promise(async (res, rej) => {
@@ -29,7 +27,7 @@ static get all(){
 	})
  }
 
- static create(data) {
+ static create(data){
 	return new Promise (async (res, rej) => {
 	   try {
 		  const db = await init();

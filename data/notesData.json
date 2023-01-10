@@ -1,14 +1,5 @@
 [
   {
-    "id": 2,
-    "title": "Hello world",
-    "note": "Hi",
-    "color": "pink",
-    "formColor": "pink",
-    "author": "mwezn",
-    "gif": "https://media2.giphy.com/media/28GHfhGFWpFgsQB4wR/giphy-downsized.gif?cid=0d81c17dzckaizn1bs0ubka3ldyj6dgp2vo9og2f088jm7l6&rid=giphy-downsized.gif&ct=g"
-  },
-  {
     "id": 3,
     "title": "rrandom",
     "note": "Hiii",
@@ -39,24 +30,6 @@
     "note": "kjj",
     "color": "white",
     "formColor": "white"
-  },
-  {
-    "id": 0,
-    "title": "Mwezn",
-    "note": "Funny cats vs dogs jedi",
-    "color": "white",
-    "formColor": "white",
-    "author": "mwezn",
-    "gif": "https://media2.giphy.com/media/xBAreNGk5DapO/giphy.gif?cid=0d81c17dh0rwpc4gh5k4xqfxhrgjsab0bcadba8g060qmrwg&rid=giphy.gif&ct=g",
-    "heart": 3,
-    "thumbs": 2,
-    "neutral": 2,
-    "comments": [
-      {
-        "comment": "HAHA",
-        "author": "anonymous"
-      }
-    ]
   },
   {
     "heart": 2
