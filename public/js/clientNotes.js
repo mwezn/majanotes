@@ -150,7 +150,10 @@ function addDeleteFunctionality(data, id) {
 						'Content-Type': 'application/json'
 					}
 				})
-			.then(resp => resp.json())
+			.then(resp => {
+				console.log(resp.json());
+				window.location.href='/'
+			})
 			.catch(err => console.log(err));
 		});
 	}

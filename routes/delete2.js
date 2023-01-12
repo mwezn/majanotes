@@ -10,8 +10,7 @@ router
       try{
           let note=Note.delete(parseInt(req.params.id));
           console.log(note,req.params.id)
-          //res.redirect('/')
-          res.json('note deleted!')
+          res.redirect('/')
       }
       catch(err){
           console.log(err)
