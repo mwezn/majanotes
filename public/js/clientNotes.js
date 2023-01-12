@@ -144,17 +144,37 @@ function addDeleteFunctionality(data, id) {
 	} else {
 		deleteButton.addEventListener('click', () => {
 			fetch(`${protocol}//${host}/delete/${id}`, {
-					"method": 'POST',
+					"method": 'GET',
+					"headers": {
+						'Accept': 'application/json',
+						'Content-Type': 'application/json'
+					}
+				})
+			.then(resp => resp.json())
+			.catch(err => console.log(err));
+		});
+	}
+}
+
+/*function addDeleteFunctionality(data, id) {
+	const deleteButton = document.querySelector(`#deleteButton${id}`);
+	if (data.author !== localStorage.getItem('username')) {
+		deleteButton.style.display = "none"
+	} else {
+		deleteButton.addEventListener('click', () => {
+			fetch(`${protocol}//${host}/delete/${id}`, {
+					"method": 'GET',
 					"headers": {
 						'Accept': 'application/json',
 						'Content-Type': 'application/json'
 					},
 					"body": JSON.stringify({username: localStorage.getItem('username'), password: localStorage.getItem('password')})})
-			.then(resp => location.reload())
+			.then(resp => resp.json())
 			.catch(err => console.log(err));
 		});
 	}
-}
+}*/
+
 
 function addEditFunctionality(data, id) {
 	const editButton = document.querySelector(`#editButton${id}`);

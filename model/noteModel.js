@@ -42,6 +42,19 @@ static get all(){
 	   }
 	})
  }
+ static delete(id){
+	return new Promise(async (res, rej) => {
+	   try {
+			 const db = await init()
+			 const usersData = await db.collection('notes').deleteOne({"id": id})
+			 //const users = usersData.map(user => new Habit({...user}))
+			 console.log(usersData)
+			 res(usersData)
+	   } catch (err) {
+			 rej(`Error deleting habit for user: ${err}`)
+	   }
+	})
+ }
 
 }
 
