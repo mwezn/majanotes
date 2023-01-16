@@ -9,7 +9,7 @@ const newRouter = require("./routes/new");
 const editRouter = require("./routes/edit");
 const deleteRouter = require("./routes/delete2");
 const emojiRouter = require("./routes/emoji");
-const commentRouter = require("./routes/comment");
+const commentRouter = require("./routes/comment2");
 const loginRouter= require("./routes/login");
 const registerRouter= require("./routes/register");
 

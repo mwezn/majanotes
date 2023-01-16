@@ -73,6 +73,24 @@ static get all(){
 	   }
 	})
  }
+ static update(id,data){
+	return new Promise(async (res, rej) => {
+	   try {
+		  const db = await init()
+		  const habitToUpdate = await this.getById(id)
+		  let dataToUpdate = {"comments": [...habitToUpdate.comments,data]}
+		  console.log(dataToUpdate)
+		
+		  const usersData = await db.collection('notes').updateOne(
+			 { "id": id },{ $set: dataToUpdate}
+		  )  
+		  res(usersData)
+	   } catch (err) {
+			 rej(`Error updating note for user: ${err}`)
+	   }
+	})
+
+  }
 
 }
 

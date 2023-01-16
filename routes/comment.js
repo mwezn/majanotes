@@ -47,7 +47,7 @@ router
     //you have to be mega careful to use the !=, and nothing but the != operand here
     notesData = notesData.filter(e => e.id != req.params.id);
     notesData.push(noteToModify);
-
+...
     notesJson = JSON.stringify(notesData, null, 2);
 
     //write the json file
