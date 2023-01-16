@@ -11,7 +11,7 @@ class Note {
 		this.heart=data.heart;
 		this.thumbs=data.thumbs;
 		this.neutral=data.neutral;
-		this.comments=data.comments;
+		this.comments=data.comments||[];
 	}
 
 static get all(){
