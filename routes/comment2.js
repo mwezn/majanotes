@@ -19,7 +19,7 @@ router
             data={"comment": req.body.comment, "author": req.body.username};
           } 
         else {
-            data={comment: req.body.comment, author: 'anonymous'};
+            data={"comment": req.body.comment, "author": 'anonymous'};
         }
         let editComment= await Note.update(parseInt(req.params.id),data);
         res.send(editComment)
