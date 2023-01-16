@@ -20,7 +20,18 @@ router.get("/loggedout", (req, res) =>{
 })
 
 //request only one note, and their comments
-router.get("/:id", (req, res) => {
+
+router.get("/:id", async (req, res) => {
+  res.set('Content-Type', 'application/json');
+  try {
+    note = await Note.getById(parseInt(req.params.id));
+	  res.json(note);
+  } catch (err) {
+    console.log(err)
+    res.send(err);
+  }
+});
+/*router.get("/:id", (req, res) => {
   res.set('Content-Type', 'application/json');
   try {
     notesJson = fs.readFileSync(path.resolve(__dirname, "../data/notesData.json"), "utf-8");
@@ -31,6 +42,7 @@ router.get("/:id", (req, res) => {
   } catch (err) {
     res.send([]);
   }
-});
+});*/
+
 
 module.exports = router;

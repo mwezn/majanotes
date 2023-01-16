@@ -118,7 +118,7 @@ function changeToCreateForm(e) {
 	resetGifDisplay(e);
 	document.querySelector(".sticky-content").classList.remove("sticky-content-edit");
 	document.querySelector("#noteCreateText").textContent = "Create Your Note";
-
+	
 	document.querySelector("#titleBox").value = '';
 	document.querySelector("#noteBox").value = '';
 	document.querySelector("#colorDropdown").value = 'white';
@@ -134,24 +134,3 @@ function changeToCreateForm(e) {
 }
 
 
-
-
-//graveyard:
-//document.querySelector("#addNewNote").addEventListener('submit', e => {
-//	e.preventDefault();
-//    let title = document.querySelector("#titleBox").value;
-//    let note = document.querySelector("#noteBox").value;
-//    let color = document.querySelector("#colorDropdown").value;
-//	let gif=document.querySelector("#giphyUrl").value;
-//	console.log(title,note,color,gif)
-//	let xhr = new XMLHttpRequest();
-//	xhr.open("POST", `${protocol}//${host}/new`);
-//	xhr.setRequestHeader('Content-Type', 'application/json');
-//	xhr.send(JSON.stringify({
-//		title: title,
-//		note: note,
-//		color: color,
-//		gif: selectedGif
-//	}));
-//	window.location.href = `${protocol}//${host}/notes`
-//})

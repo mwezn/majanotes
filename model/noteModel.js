@@ -27,6 +27,24 @@ static get all(){
 	})
  }
 
+ static getById(id){
+  return new Promise(async (res, rej) =>{
+
+	try {
+		const db = await init();
+		console.log("getting note by id")
+		let note= await db.collection('notes').find({"id": id}).toArray();
+		let newNote = new Note(note[0]);
+		console.log(note,newNote)
+		res(newNote)
+
+	 } catch (err) {
+		rej(`Error fetching note with id ${id}: ${err}`);
+	 }
+	})
+
+ }
+
  static create(data){
 	return new Promise (async (res, rej) => {
 	   try {
