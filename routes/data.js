@@ -1,6 +1,4 @@
 const express = require("express");
-const fs = require("fs");
-const path = require('path');
 const router = express.Router();
 const Note = require('../model/noteModel')
 
@@ -31,18 +29,7 @@ router.get("/:id", async (req, res) => {
     res.send(err);
   }
 });
-/*router.get("/:id", (req, res) => {
-  res.set('Content-Type', 'application/json');
-  try {
-    notesJson = fs.readFileSync(path.resolve(__dirname, "../data/notesData.json"), "utf-8");
-		let notesData = JSON.parse(notesJson);
-		notesData = notesData.find(e => e.id == req.params.id);
-		notesJson = JSON.stringify(notesData, null, 2);
-    res.send(notesJson);
-  } catch (err) {
-    res.send([]);
-  }
-});*/
+
 
 
 module.exports = router;

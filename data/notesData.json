@@ -21,7 +21,8 @@
         "comment": "hi haha",
         "author": "mwezn"
       }
-    ]
+    ],
+    "heart": 7
   },
   {
     "id": 1,
@@ -31,7 +32,7 @@
     "formColor": "blue",
     "author": "mwezn",
     "gif": "https://media2.giphy.com/media/Mr5yS9nR4kAda/giphy.gif?cid=0d81c17d03fs6jlxm5pdwsme9316ds0zdm342dkok02mdytx&rid=giphy.gif&ct=g",
-    "heart": 5,
+    "heart": 7,
     "comments": [
       {
         "comment": "lol",

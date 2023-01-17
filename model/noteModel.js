@@ -91,6 +91,25 @@ static get all(){
 	})
 
   }
+  static updateEmoji(id,data){
+	return new Promise(async (res, rej) => {
+	   try {
+		  const db = await init()
+		  const noteToUpdate = await this.getById(id)
+		  let note=noteToUpdate[data];
+		  let count=note+=1;
+		  let emojiUpdate=data=="heart"?{"heart": count}:data=="thumbs"?{"thumbs":count}:{"neutral":count};
+		  console.log(emojiUpdate)
+		  const usersData = await db.collection('notes').updateOne(
+			 { "id": id },{ $set: emojiUpdate}
+		  )  
+		  res(usersData)
+	   } catch (err) {
+			 rej(`Error updating note for user: ${err}`)
+	   }
+	})
+
+  }
 
 }
 
