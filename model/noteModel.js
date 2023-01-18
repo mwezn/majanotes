@@ -8,9 +8,9 @@ class Note {
 		this.formColor = data.formColor;
 		this.author=data.author||data.username;
 		this.gif=data.gif;
-		this.heart=data.heart;
-		this.thumbs=data.thumbs;
-		this.neutral=data.neutral;
+		this.heart=data.heart||0;
+		this.thumbs=data.thumbs||0;
+		this.neutral=data.neutral||0;
 		this.comments=data.comments||[];
 	}
 
