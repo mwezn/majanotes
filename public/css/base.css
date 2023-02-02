@@ -101,6 +101,35 @@ a:hover {
   white-space: nowrap;
 }
 
+#createButton::before {
+  position:absolute;
+  content: '+';
+  font-size: 40px;
+  width:1px;
+  transition:all .2s;
+	
+}
+
+#createButton.open::before {
+  transform: rotate(45deg) translate(3px, -3px);
+}
+
+.mainBtn {
+	border-radius: 20px;
+	padding: 10px 0px;
+	cursor: pointer;
+	background-color: lightgray;
+	color: black;
+	font-size: 2vw;
+	text-align: center;
+	font-weight: normal;
+}
+
+
+.mainBtn.open::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
 
 
 .card-title {
@@ -156,24 +185,7 @@ a:hover {
   margin-left: 20px;
 }
 
-.mainBtn {
-	border-radius: 20px;
-	padding: 10px 0px;
-	cursor: pointer;
-	background-color: lightgray;
-	color: black;
-	font-size: 2vw;
-	text-align: center;
-	font-weight: normal;
-}
 
-.mainBtn::before {
-  content: '+';
-  transition:all 2s;
-}
-.mainBtn.open::before {
-  transform: rotate(45deg) translate(35px, -35px);
-}
 
 button {
     border-radius: 20px;
