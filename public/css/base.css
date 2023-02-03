@@ -97,8 +97,10 @@ a:hover {
 	position: relative;
 	top: 0;
   margin-left: 10%;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px 10px 30px;
   white-space: nowrap;
+  transition: all .2s;
+  border:0px solid black;
 }
 
 #createButton::before {
@@ -107,11 +109,16 @@ a:hover {
   font-size: 40px;
   width:1px;
   transition:all .2s;
+  transform: translate(-20px, -10px);
 	
+}
+#createButton.open {
+  border:3px solid black;
 }
 
 #createButton.open::before {
-  transform: rotate(45deg) translate(3px, -3px);
+  transform: rotate(45deg) translate(-20px, 0px);
+  
 }
 
 .mainBtn {
@@ -123,12 +130,11 @@ a:hover {
 	font-size: 2vw;
 	text-align: center;
 	font-weight: normal;
+  width: fit-content;
+  height:60px;
 }
 
 
-.mainBtn.open::before {
-  transform: rotate(45deg) translate(35px, -35px);
-}
 
 
 

@@ -40,7 +40,7 @@ createButton.addEventListener('click', () => {
     console.log(stickycontainer.classList)
     createButton.classList.toggle('open')
 
-    if(stickycontainer.classList.contains('active')) createButton.innerHTML='close'
+    if(stickycontainer.classList.contains('active')) createButton.textContent='close'
     else {
         createButton.innerHTML='create'
     } 
