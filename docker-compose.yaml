@@ -12,6 +12,7 @@ services:
       - DB_CONNECTION=mongodb://dockerdb:passwd@db:27017
     depends_on:
       - db
+    
     volumes:
       - type: bind
         source: ./

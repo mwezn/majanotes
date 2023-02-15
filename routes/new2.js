@@ -1,4 +1,5 @@
 const Note = require('../model/noteModel')
+const sharedFunctions = require("./sharedFunctions");
 
 async function newNote(req, res,editing=false) {
 

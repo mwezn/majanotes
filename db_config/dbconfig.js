@@ -1,12 +1,18 @@
 const { MongoClient } = require('mongodb')
-const connectionUrl = process.env.DB_CONNECTION||'mongodb://futureproof:userpass@db:27017'
+const connectionUrl = process.env.DB_CONNECTION||'mongodb://dockerdb:passwd@db:27017'
 
-const dbName = process.env.DB_NAME||'users'
+const dbName = process.env.DB_NAME||'notes'
 
 const init = async () => {
-  let client = await MongoClient.connect(connectionUrl)
-  console.log('connected to database!', dbName)
-  return client.db(dbName)
+  try {
+   let client = await MongoClient.connect(connectionUrl)
+   console.log('connected to database!', dbName)
+   return client.db(dbName)
+  }
+  catch(err){
+    console.log(err)
+    return err
+  }
 }
 
 
