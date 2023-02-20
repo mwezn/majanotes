@@ -18,6 +18,10 @@ async function newNote(req, res,editing=false) {
   }
   
   try {
+    req.body.title = req.body.title.replace(/</g, "&lt;")
+    req.body.title = req.body.title.replace(/>/g, "&gt;")
+    req.body.note = req.body.note.replace(/</g, "&lt;")
+    req.body.note = req.body.note.replace(/>/g, "&gt;")
       console.log(req.body, {...req.body,id});
       let noteData={...req.body, id}
       let note= Note.create(noteData);
