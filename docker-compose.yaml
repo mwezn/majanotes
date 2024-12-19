@@ -1,5 +1,4 @@
-  
-version: '3'
+version: '2.0'  
 services:
   server:
     image: node:12.18.4
@@ -14,9 +13,7 @@ services:
       - db
     
     volumes:
-      - type: bind
-        source: ./
-        target: /code
+      - './:/code'
     command: bash -c "npm install && npm run dev"
 
   db:
@@ -24,11 +21,10 @@ services:
     # to access this container in interactive mode type: docker exec -it fp_majanotes_db_1 mongo --username dockerdb
     # when prompted the password is defined below (passwd) 
     volumes:
-      - "dbdata:/var/lib/mongodb/data"
+      - "./dbdata:/var/lib/mongodb/data"
       - "./db/seeds.js:/docker-entrypoint-initdb.d/seeds.js:ro"
     environment: 
       - MONGO_INITDB_ROOT_USERNAME=dockerdb
       - MONGO_INITDB_DATABASE=notes
       - MONGO_INITDB_ROOT_PASSWORD=passwd
-volumes:
-  dbdata:
+

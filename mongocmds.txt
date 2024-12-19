@@ -1,0 +1,21 @@
+db.notes.find()
+
+//displays all objects in collection
+
+db.notes.find({id:0})
+{ "_id" : ObjectId("6764513606b5a6ca998522f1"), "id" : 0, 
+"title" : "Mwezn", "note" : "Funny cats vs dogs jedi", 
+"color" : "green", "formColor" : "white", "author" : "mwezn", 
+"gif" : "https://media2.giphy.com/media/xBAreNGk5DapO/giphy.gif?cid=0d81c17dh0rwpc4gh5k4xqfxhrgjsab0bcadba8g060qmrwg&rid=giphy.gif&ct=g", 
+"heart" : 3, 
+"thumbs" : 2, "neutral" : 2, 
+"comments" : [ { "comment" : "HAHA", "author" : "anonymous" } ] }
+
+//displays object by id given
+
+> db.notes.updateOne({id:0}, {$set: {color:'white'}})
+{ "acknowledged" : true, "matchedCount" : 1, "modifiedCount" : 1 }
+
+//finds object by id & changes a property given by $set
+
+

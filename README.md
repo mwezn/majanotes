@@ -76,3 +76,28 @@ More emojis
 Security questions
 Search option
 
+
+## Important Commands
+
+To run fullstack app in Docker
+
+1) navigate into majanotes `cd majanotes`
+
+2) To start container (using docker-compose.yaml by default): 
+  `docker-compose up` 
+(might require different docker version depending on syntax errors)
+
+
+3) To find running containers:
+
+`sudo docker ps -a`
+
+4) To enter mongodb container once running:
+  `sudo docker exec -it majanotes_db_1 mongo -u dockerdb`
+
+password prompt will appear default is `passwd`
+
+5) To stop container & remove:
+
+`docker-compose down --volumes --remove-orphans`
+
